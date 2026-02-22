@@ -1,0 +1,43 @@
+{
+  "siteName": "Stiventours",
+  "description": "Agencia de turismo y experiencias",
+  "contact": {
+    "phone": "+573001234567",
+    "email": "reservas@stiventours.com"
+  },
+  "pasadias": [
+    {
+      "id": "isla-encanto",
+      "title": "Isla del Encanto",
+      "price": "180.000",
+      "currency": "COP",
+      "tags": ["playa", "buffet", "recomendado"],
+      "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+      "short": "Transporte ida y vuelta, almuerzo buffet y acceso a playa.",
+      "features": ["Transporte ida y vuelta","Almuerzo tipo Buffet","Acceso a piscina y playa"],
+      "long": "Disfruta de un día completo en la Isla del Encanto con actividades y tiempo libre para relajarte en la playa."
+    },
+    {
+      "id": "playa-blanca",
+      "title": "Playa Blanca Barú",
+      "price": "95.000",
+      "currency": "COP",
+      "tags": ["playa","nautico"],
+      "image": "https://turcol.co/wp-content/uploads/2022/10/Playa-Baru-3.png",
+      "short": "Transporte terrestre y náutico con almuerzo caribeño.",
+      "features": ["Transporte terrestre/náutico","Almuerzo caribeño","Guía acompañante"],
+      "long": "Ruta en barco hacia Playa Blanca, con tiempo para snorkel y almuerzo típico caribeño incluido."
+    },
+    {
+      "id": "centro-historico",
+      "title": "Centro Historico",
+      "price": "110.000",
+      "currency": "COP",
+      "tags": ["eco","caminata"],
+      "image": "https://blog.redbus.co/wp-content/uploads/2020/01/Proyecto-nuevo-2025-02-28T121409.781.jpg",
+      "short": "Caminata guiada, refrigerio y baño en río natural.",
+      "features": ["Caminata guiada","Refrigerio saludable","Baño en río natural"],
+      "long": "Explora senderos protegidos con guía especializado y disfruta de la biodiversidad local."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+:root {
+    --stiven-blue: #0056b3;
+    --stiven-orange: #ff7e00;
+    --muted: #6b7280;
+}
+
+/* Diseño general y escala */
+:root{
+    --container-max: 1200px;
+    --radius: 12px;
+    --shadow-strong: 0 12px 30px rgba(2,6,23,0.12);
+}
+
+html,body{height:100%}
+body{background:linear-gradient(180deg,#fbfdff 0%,#f8fafc 100%);color:#0f172a;-webkit-font-smoothing:antialiased}
+
+/* Botones reutilizables */
+.btn-primary{background:var(--stiven-orange);color:white;padding:.9rem 1.2rem;border-radius:999px;font-weight:700;box-shadow:0 8px 20px rgba(255,126,0,0.12);transition:transform .25s ease,box-shadow .25s ease}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(2,6,23,0.12)}
+.btn-ghost{background:white;border:1px solid #e6eefb;color:var(--stiven-blue);padding:.7rem 1rem;border-radius:999px}
+
+/* Hero tweaks */
+.hero-gradient .inline-block{letter-spacing:1px}
+.hero-gradient h1{text-shadow:0 6px 20px rgba(2,6,23,0.15)}
+
+/* Tarjetas: elevación sutil y hover */
+.tour-card{transition:transform .45s cubic-bezier(.2,.9,.3,1),box-shadow .35s ease}
+.tour-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:var(--shadow-strong)}
+.tour-card .body h3{transition:color .2s ease}
+.tour-card:hover .body h3{color:var(--stiven-orange)}
+
+/* Reveal on scroll helpers */
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.9,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+
+/* Header scrolled state */
+header{transition:box-shadow .25s ease,background-color .25s ease}
+header.scrolled{box-shadow:0 8px 30px rgba(2,6,23,0.12);background-color:rgba(255,255,255,0.95)}
+
+/* Modal: mejorar entrada */
+.st-modal .panel{transform:translateY(12px);transition:transform .28s ease,opacity .28s ease}
+.st-modal.active .panel{transform:none}
+
+/* Accesibilidad: reduce motion */
+@media (prefers-reduced-motion: reduce){
+    .tour-card,.btn-primary,.reveal{transition:none}
+}
+
+/* Card styles for dynamically injected pasadías */
+.tour-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+    border: 1px solid #eef2f7
+}
+
+.tour-card .thumb {
+    height: 16rem;
+    object-fit: cover;
+    width: 100%;
+    display: block
+}
+
+.tour-card .body {
+    padding: 1.5rem
+}
+
+.tag-pill {
+    display: inline-block;
+    background: var(--stiven-orange);
+    color: white;
+    padding: .25rem .6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .75rem
+}
+
+.price {
+    color: var(--stiven-blue);
+    font-weight: 800
+}
+
+/* Modal */
+.st-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000
+}
+
+.st-modal.active {
+    display: flex
+}
+
+.st-modal .panel {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 920px;
+    width: 94%;
+    max-height: 90vh;
+    overflow: auto
+}
+
+.st-modal .panel .content {
+    padding: 1.5rem
+}
+
+@media (max-width:640px) {
+    .tour-card .thumb {
+        height: 12rem
+    }
+}
+
+/* Estilos para el menú móvil desplegable (acordeón) */
+@media (max-width:767px) {
+    #main-nav.mobile-open {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 64px;
+        background: #ffffff;
+        padding: 1rem;
+        display: flex !important;
+        flex-direction: column;
+        gap: .75rem;
+        align-items: center; /* centrar horizontalmente los items */
+        box-shadow: 0 12px 30px rgba(2, 6, 23, 0.12);
+        z-index: 60;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    #main-nav.mobile-open a {
+        padding: .6rem .75rem;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0.25rem auto; /* centrar cada botón */
+        min-width: 160px; /* ancho mínimo para aspecto de botón */
+    }
+}

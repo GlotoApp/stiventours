@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stiventours | Agencia de Turismo y Experiencias</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --stiven-blue: #0056b3;
+            --stiven-orange: #ff7e00;
+            --stiven-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            /* imagen de fondo con overlay oscuro para mejor legibilidad del texto */
+            background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .text-stiven-blue { color: var(--stiven-blue); }
+        .bg-stiven-blue { background-color: var(--stiven-blue); }
+        .text-stiven-orange { color: var(--stiven-orange); }
+        .bg-stiven-orange { background-color: var(--stiven-orange); }
+
+        .whatsapp-modal {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 320px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 1000;
+            overflow: hidden;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .whatsapp-active .whatsapp-modal {
+            display: block;
+        }
+
+        .chat-bubble {
+            background: #dcf8c6;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .chat-bubble::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 10px;
+            border-width: 5px 10px 5px 0;
+            border-style: solid;
+            border-color: transparent #dcf8c6 transparent transparent;
+        }
+
+        .nav-link:hover {
+            color: var(--stiven-orange);
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <noscript>
+        <div style="background:#fff4f4;border:1px solid #fecaca;color:#842029;padding:12px;border-radius:8px;margin:16px;max-width:1100px;margin-left:auto;margin-right:auto;">
+            Esta página requiere JavaScript para funcionar correctamente. Si ves este mensaje, por favor habilita JavaScript o accede al sitio desde un servidor con JS activo.
+        </div>
+    </noscript>
+
+    <!-- Header / Nav -->
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md border-b-4 border-orange-500">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-3xl font-extrabold flex items-center gap-2">
+                <span class="text-blue-700">STIVEN</span><span class="text-orange-500 underline decoration-blue-700 decoration-4">TOURS</span>
+            </div>
+            <div id="main-nav" class="hidden md:flex space-x-8 font-semibold items-center">
+                <a href="#inicio" class="text-blue-900 nav-link transition">Inicio</a>
+                <a href="#pasadias" class="text-blue-900 nav-link transition">Pasadías</a>
+                <a href="#tours" class="text-blue-900 nav-link transition">Tours</a>
+                <a href="#nosotros" class="text-blue-900 nav-link transition">Nosotros</a>
+                <a href="#contacto" class="px-6 py-2 bg-orange-500 text-white rounded-full hover:bg-blue-700 transition shadow-md">RESERVAR</a>
+            </div>
+            <button id="mobile-nav-btn" aria-controls="main-nav" aria-expanded="false" class="md:hidden text-2xl text-blue-900" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient h-[90vh] flex items-center justify-center text-center text-white px-4 pt-16">
+        <div class="max-w-4xl">
+            <div class="inline-block bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-widest uppercase">Explora con Expertos</div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Descubre el mundo con <span class="text-orange-400">Stiventours</span></h1>
+            <p class="text-xl mb-8 opacity-95 max-w-2xl mx-auto">Especialistas en pasadías inolvidables y tours personalizados con la seguridad y confianza que solo nosotros te brindamos.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#pasadias" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg transition shadow-xl transform hover:-translate-y-1">Ver Experiencias</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas Stiventours -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex items-start gap-4 p-6 rounded-2xl bg-blue-50 border-l-4 border-blue-600">
+                <i class="fas fa-shield-alt text-3xl text-blue-600"></i>
+                <div>
+                    <h4 class="font-bold text-lg">Viaje Seguro</h4>
+                    <p class="text-sm text-gray-600">Pólizas de seguro incluidas en cada aventura.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 p-6 rounded-2xl bg-orange-50 border-l-4 border-orange-500">
+                <i class="fas fa-wallet text-3xl text-orange-500"></i>
+                <div>
+                    <h4 class="font-bold text-lg">Precios Justos</h4>
+                    <p class="text-sm text-gray-600">La mejor relación calidad-precio del mercado.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-4 p-6 rounded-2xl bg-blue-50 border-l-4 border-blue-600">
+                <i class="fas fa-headset text-3xl text-blue-600"></i>
+                <div>
+                    <h4 class="font-bold text-lg">Soporte 24/7</h4>
+                    <p class="text-sm text-gray-600">Atención personalizada antes y durante tu viaje.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Pasadías -->
+    <section id="pasadias" class="py-20 container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-blue-900 mb-4 uppercase">Pasadías</h2>
+            <div class="w-24 h-1 bg-orange-500 mx-auto"></div>
+            <p class="mt-4 text-gray-600">Escápate de la rutina con nuestros planes de un día completo.</p>
+        </div>
+
+        <div id="pasadias-list" class="grid md:grid-cols-3 gap-10">
+            <!-- Los pasadías se cargan dinámicamente desde data.json -->
+        </div>
+    </section>
+
+    <!-- Sección Corporativa -->
+    <section id="nosotros" class="py-20 bg-blue-900 text-white">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 border-t-8 border-l-8 border-orange-500"></div>
+                <img src="https://www.tomplanmytrip.com/wp-content/uploads/2022/03/Terraza-municipal-sunset-getsemani.jpg" alt="Equipo Stiventours" class="rounded-3xl shadow-2xl">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold mb-6 italic underline decoration-orange-500">¿Por qué elegir Stiventours?</h2>
+                <p class="text-lg mb-8 opacity-90 leading-relaxed">Somos una agencia comprometida con el desarrollo turístico regional. Cooperamos directamente **Nosotros** y nuestros operadores certificados para garantizar que cada centavo de tu inversión se traduzca en felicidad.</p>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-certificate text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl">Certificación RNT</h4>
+                            <p class="text-gray-300">Cumplimos con toda la normativa legal vigente para tu tranquilidad.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-white text-blue-900 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl">Cooperación Directa</h4>
+                            <p class="text-gray-300">Trabajamos sin intermediarios innecesarios para ofrecerte el mejor precio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-blue-900 pt-20 pb-10 border-t-8 border-blue-900">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div>
+                <div class="text-3xl font-extrabold mb-6">
+                    <span>STIVEN</span><span class="text-orange-500">TOURS</span>
+                </div>
+                <p class="text-gray-600 mb-6">Expertos en crear sonrisas y experiencias memorables en cada destino.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold text-xl mb-6 text-orange-500">Destinos</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="#" class="hover:text-orange-500 transition">Islas del Rosario</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition">Ciudad Perdida</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition">Pasadía</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition">Eje Cafetero</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-xl mb-6 text-orange-500">Compañía</h4>
+                <ul class="space-y-4 font-medium">
+                    <li><a href="#" class="hover:text-orange-500 transition">Nosotros</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition">Blog de Viajes</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition">Términos Legales</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-xl mb-6 text-orange-500">Contacto</h4>
+                <ul class="space-y-4 text-gray-600">
+                    <li><i class="fas fa-phone-alt text-orange-500 mr-2"></i> +57 123 456 7890</li>
+                    <li><i class="fas fa-envelope text-orange-500 mr-2"></i> reservas@stiventours.com</li>
+                    <li><i class="fas fa-map-marker-alt text-orange-500 mr-2"></i> Calle Principal #12-34</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-20 text-gray-400 text-sm">
+            <p>&copy; 2026 Stiventours - Agencia de Viajes. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating System con los colores de Stiventours -->
+    <div id="whatsapp-wrapper">
+        <button onclick="toggleWhatsapp()" class="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-4xl shadow-2xl z-[1001] hover:scale-110 transition duration-300">
+            <i class="fab fa-whatsapp"></i>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 rounded-full border-2 border-white flex items-center justify-center text-[10px] font-bold">1</span>
+        </button>
+
+        <div id="whatsapp-modal" class="whatsapp-modal">
+            <!-- Header WhatsApp -->
+            <div class="bg-blue-800 text-white p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="w-10 h-10 bg-white text-blue-800 rounded-full flex items-center justify-center font-bold">ST</div>
+                        <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-blue-800 rounded-full"></span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold">Stiventours | Reservas</p>
+                        <p class="text-[10px] opacity-80">Generalmente responde en minutos</p>
+                    </div>
+                </div>
+                <button onclick="toggleWhatsapp()" class="text-white opacity-70 hover:opacity-100">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Body WhatsApp -->
+            <div class="p-4 bg-[#E5DDD5] min-h-[180px]">
+                <div class="chat-bubble shadow-md">
+                    <p class="text-[11px] text-orange-600 font-bold mb-1">Agente de Reservas</p>
+                    <p class="text-sm text-gray-800">¡Hola! Soy parte del equipo de Stiventours. He preparado un borrador para tu consulta. ¿Deseas enviarlo ahora?</p>
+                </div>
+                
+                <div class="mt-4 bg-white p-3 rounded-xl border-l-4 border-orange-500 shadow-sm">
+                    <p class="text-xs text-gray-400 mb-1 uppercase font-bold tracking-tighter">Vista previa del mensaje:</p>
+                    <p class="text-sm italic text-gray-600">
+                        "Hola Stiventours, me gustaría recibir más información y disponibilidad sobre los planes de pasadía y tours que ofrecen en su web."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer WhatsApp -->
+            <div class="p-4 bg-white">
+                <button onclick="sendWhatsapp()" class="w-full bg-[#25D366] text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#128C7E] transition shadow-lg">
+                    <i class="fab fa-whatsapp"></i> CONTINUAR AL CHAT
+                </button>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function toggleWhatsapp() {
+        const wrapper = document.getElementById('whatsapp-wrapper');
+        wrapper.classList.toggle('whatsapp-active');
+    }
+
+    function sendWhatsapp() {
+        const phoneNumber = "573001234567"; 
+        const message = "Hola Stiventours, me gustaría recibir más información y disponibilidad sobre los planes de pasadía y tours que ofrecen en su web.";
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+        toggleWhatsapp();
+    }
+
+    // Cerrar modal al hacer clic fuera
+    window.addEventListener('click', function(e) {
+        const wrapper = document.getElementById('whatsapp-wrapper');
+        const modal = document.getElementById('whatsapp-modal');
+        const btn = document.querySelector('button[onclick="toggleWhatsapp()"]');
+        
+        if (wrapper.classList.contains('whatsapp-active')) {
+            if (!modal.contains(e.target) && !btn.contains(e.target)) {
+                toggleWhatsapp();
+            }
+        }
+    });
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
