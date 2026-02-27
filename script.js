@@ -1,21 +1,92 @@
 // script.js: carga data.json y renderiza los pasadías, además muestra un modal con detalles
 let stData = null;
 
-async function loadData(){
-  try{
+async function loadData() {
+  try {
     const res = await fetch('data.json');
-    if(!res.ok) throw new Error('HTTP ' + res.status);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     stData = data;
-    document.title = (data.siteName || 'Stiventours') + ' | Agencia de Turismo';
-    const valid = validateData(data);
-    if(valid.invalid.length){
-      showValidationWarning(valid.invalid);
+
+    // Actualizar título del documento
+    document.title = (data.siteName || 'Stivenm Tours') + ' | Agencia de Turismo';
+
+    // 1. Optimización del PDF: Configura el link automáticamente si existe en data.json
+    const pdfBtn = document.getElementById('download-pdf');
+    if (pdfBtn && data.pdfCatalogo) {
+      pdfBtn.href = data.pdfCatalogo; 
     }
-    renderPasadias(valid.items);
-  }catch(e){
+
+    // 2. Renderizar Pasadías (Existente)
+    const validPasadias = validateData({ pasadias: data.pasadias || [] });
+    if (validPasadias.invalid.length) {
+      showValidationWarning(validPasadias.invalid);
+    }
+    renderPasadias(validPasadias.items);
+
+    // 3. Renderizar Tours (Nueva sección con tarjetas similares)
+    if (data.tours) {
+      const validTours = validateData({ pasadias: data.tours }); // Reutiliza validación
+      renderTours(validTours.items);
+    }
+
+  } catch (e) {
     console.error('Error cargando data.json', e);
-    showLoadError('No se pudo cargar la lista de pasadías. Verifica que estés sirviendo el sitio desde un servidor (no file://) y que `data.json` exista.');
+    showLoadError('No se pudo cargar la información. Verifica que data.json exista.');
+  }
+}
+
+/**
+ * Renderiza los Tours con el mismo diseño de tarjetas que los Pasadías
+ */
+function renderTours(list) {
+  const container = document.getElementById('tours-list');
+  if (!container) return;
+  container.innerHTML = '';
+
+  list.forEach(item => {
+    const col = document.createElement('div');
+    // Usamos las mismas clases CSS: tour-card y reveal para animación
+    col.className = 'tour-card group reveal'; 
+    col.innerHTML = `
+      <div class="relative overflow-hidden">
+        <img loading="lazy" src="${item.image}" alt="${escapeHtml(item.title)}" class="thumb">
+      </div>
+      <div class="body">
+        <h3 class="text-2xl font-bold text-blue-900 mb-3">${escapeHtml(item.title)}</h3>
+        <p class="text-sm text-gray-600 mb-4">${escapeHtml(item.short)}</p>
+        <ul class="text-sm text-gray-600 mb-4">
+          ${item.features.map(f => `<li>• ${escapeHtml(f)}</li>`).join('')}
+        </ul>
+        <div class="flex justify-between items-center mt-auto">
+          <span class="price text-2xl">$${escapeHtml(item.price)} <small class="text-xs text-gray-400">${escapeHtml(item.currency)}</small></span>
+          <button data-id="${item.id}" class="ver-mas bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 transition">Ver más</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(col);
+  });
+
+  // Conectar los botones "Ver más" al modal existente
+  container.querySelectorAll('.ver-mas').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-id');
+      const item = list.find(x => x.id === id);
+      if (item) showModal(item);
+    });
+  });
+
+  // Reiniciar el observador de animaciones para las nuevas tarjetas
+  if (window.IntersectionObserver) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if(en.isIntersecting) {
+          en.target.classList.add('visible');
+          observer.unobserve(en.target);
+        }
+      });
+    }, {threshold: 0.1});
+    container.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   }
 }
 
@@ -209,7 +280,7 @@ function getContactPhone(){
     // limpiar caracteres no numéricos
     return String(stData.contact.phone).replace(/[^0-9]/g,'');
   }
-  return '573001234567';
+  return '573228209657';
 }
 
 function escapeHtml(str){

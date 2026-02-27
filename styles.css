@@ -14,6 +14,11 @@
 html,body{height:100%}
 body{background:linear-gradient(180deg,#fbfdff 0%,#f8fafc 100%);color:#0f172a;-webkit-font-smoothing:antialiased}
 
+#logoprincipal{
+    width: 100px;
+    height: auto;
+}
+
 /* Botones reutilizables */
 .btn-primary{background:var(--stiven-orange);color:white;padding:.9rem 1.2rem;border-radius:999px;font-weight:700;box-shadow:0 8px 20px rgba(255,126,0,0.12);transition:transform .25s ease,box-shadow .25s ease}
 .btn-primary:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(2,6,23,0.12)}
@@ -23,14 +28,28 @@ body{background:linear-gradient(180deg,#fbfdff 0%,#f8fafc 100%);color:#0f172a;-w
 .hero-gradient .inline-block{letter-spacing:1px}
 .hero-gradient h1{text-shadow:0 6px 20px rgba(2,6,23,0.15)}
 
-/* Tarjetas: elevación sutil y hover */
-.tour-card{transition:transform .45s cubic-bezier(.2,.9,.3,1),box-shadow .35s ease}
-.tour-card:hover{transform:translateY(-8px) scale(1.01);box-shadow:var(--shadow-strong)}
+/* Tarjetas: elevación sutil y hover - Mejorado */
+.tour-card{
+    transition:transform .45s cubic-bezier(.2,.9,.3,1),box-shadow .35s ease,border-color .3s ease;
+    border: 2px solid transparent;
+}
+.tour-card:hover{
+    transform:translateY(-12px) scale(1.02);
+    box-shadow:0 20px 40px rgba(255,126,0,0.15);
+    border-color:var(--stiven-orange);
+}
 .tour-card .body h3{transition:color .2s ease}
 .tour-card:hover .body h3{color:var(--stiven-orange)}
+.tour-card .thumb {
+    transition: transform 0.3s ease;
+    display: block;
+}
+.tour-card:hover .thumb {
+    transform: scale(1.05);
+}
 
 /* Reveal on scroll helpers */
-.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.9,.3,1)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.9,.3,1)}
 .reveal.visible{opacity:1;transform:none}
 
 /* Header scrolled state */
@@ -46,13 +65,16 @@ header.scrolled{box-shadow:0 8px 30px rgba(2,6,23,0.12);background-color:rgba(25
     .tour-card,.btn-primary,.reveal{transition:none}
 }
 
-/* Card styles for dynamically injected pasadías */
+/* Card styles for dynamically injected pasadías y tours */
 .tour-card {
     background: white;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
-    border: 1px solid #eef2f7
+    border: 1px solid #eef2f7;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .tour-card .thumb {
@@ -63,7 +85,18 @@ header.scrolled{box-shadow:0 8px 30px rgba(2,6,23,0.12);background-color:rgba(25
 }
 
 .tour-card .body {
-    padding: 1.5rem
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-card .body ul {
+    flex-grow: 1;
+}
+
+.tour-card .body > div {
+    margin-top: auto;
 }
 
 .tag-pill {
@@ -89,10 +122,95 @@ header.scrolled{box-shadow:0 8px 30px rgba(2,6,23,0.12);background-color:rgba(25
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 2000
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .st-modal.active {
+    display: flex
+}
+
+.st-modal .panel {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 920px;
+    width: 94%;
+    max-height: 90vh;
+    overflow: auto;
+    animation: slideUp 0.4s cubic-bezier(.2,.9,.3,1);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.st-modal .panel .content {
+    padding: 1.5rem
+}
+
+@media (max-width:640px) {
+    .tour-card .thumb {
+        height: 12rem
+    }
+}
+
+/* Estilos para el menú móvil desplegable (acordeón) */
+@media (max-width:767px) {
+    #main-nav.mobile-open {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 64px;
+        background: #ffffff;
+        padding: 1rem;
+        display: flex !important;
+        flex-direction: column;
+        gap: .75rem;
+        align-items: center; /* centrar horizontalmente los items */
+        box-shadow: 0 12px 30px rgba(2, 6, 23, 0.12);
+        z-index: 60;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    #main-nav.mobile-open a {
+        padding: .6rem .75rem;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0.25rem auto; /* centrar cada botón */
+        min-width: 160px; /* ancho mínimo para aspecto de botón */
+    }
+}
+
+/* Optimización para sección Tours */
+#tours {
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+}
+
+/* Mejoras de rendimiento y accesibilidad */
+img[loading="lazy"] {
+    transition: opacity 0.3s ease;
+}
+
+button:focus-visible {
+    outline: 3px solid var(--stiven-orange);
+    outline-offset: 2px;
+}.st-modal.active {
     display: flex
 }
 

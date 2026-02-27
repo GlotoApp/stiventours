@@ -1,9 +1,9 @@
 {
-  "siteName": "Stiventours",
+  "siteName": "Stivenm tours",
   "description": "Agencia de turismo y experiencias",
   "contact": {
     "phone": "573228209657",
-    "email": "reservas@stiventours.com"
+    "email": "reservas@Stivenm Tours.com"
   },
   "pasadias": [
     {
@@ -38,6 +38,28 @@
       "short": "Caminata guiada, refrigerio y baño en río natural.",
       "features": ["Caminata guiada","Refrigerio saludable","Baño en río natural"],
       "long": "Explora senderos protegidos con guía especializado y disfruta de la biodiversidad local."
+    }
+  ],
+  "tours": [
+    {
+      "id": "tour-ciudad",
+      "title": "City Tour Cartagena",
+      "price": "60.000",
+      "currency": "COP",
+      "image": "https://aventureros360.com.co/wp-content/uploads/2025/03/CASTILLO-DE-SAN-FELIPE-viajar-a-colombia-aventureros-360-1024x576.jpg",
+      "short": "Recorrido por las murallas y monumentos históricos.",
+      "features": ["Transporte climatizado", "Guía historiador", "Entradas incluidas"],
+      "long": "Un viaje en el tiempo por la Ciudad Heroica, conociendo el Castillo de San Felipe y las botas viejas."
+    },
+    {
+      "id": "tour-islas-rosario",
+      "title": "Tour Islas del Rosario",
+      "price": "180.000",
+      "currency": "COP",
+      "image": "https://islasdelrosariotours.com/cdn/shop/files/tour_al_oceanario_en_Cartagena_576x576.jpg?v=1736200019",
+      "short": "Día completo en las Islas del Rosario con snorkel y almuerzo típico.",
+      "features": ["Transporte en lancha rápida", "Equipo de snorkel", "Almuerzo típico isleño", "Guía local"],
+      "long": "Disfruta de aguas cristalinas, arrecifes de coral y playas paradisíacas en el Parque Nacional Natural Islas del Rosario. Incluye actividades acuáticas y tiempo libre para relajarte." 
     }
   ]
 }
