@@ -7,17 +7,6 @@
   },
   "pasadias": [
     {
-      "id": "isla-encanto",
-      "title": "Isla del Encanto",
-      "price": "180.000",
-      "currency": "COP",
-      "tags": ["playa", "buffet", "recomendado"],
-      "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
-      "short": "Transporte ida y vuelta, almuerzo buffet y acceso a playa.",
-      "features": ["Transporte ida y vuelta","Almuerzo tipo Buffet","Acceso a piscina y playa"],
-      "long": "Disfruta de un día completo en la Isla del Encanto con actividades y tiempo libre para relajarte en la playa."
-    },
-    {
       "id": "playa-blanca",
       "title": "Playa Blanca Barú",
       "price": "95.000",
@@ -27,6 +16,17 @@
       "short": "Transporte terrestre y náutico con almuerzo caribeño.",
       "features": ["Transporte terrestre/náutico","Almuerzo caribeño","Guía acompañante"],
       "long": "Ruta en barco hacia Playa Blanca, con tiempo para snorkel y almuerzo típico caribeño incluido."
+    },
+    {
+      "id": "isla-encanto",
+      "title": "Isla del Encanto",
+      "price": "180.000",
+      "currency": "COP",
+      "tags": ["playa", "buffet", "recomendado"],
+      "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+      "short": "Transporte ida y vuelta, almuerzo buffet y acceso a playa.",
+      "features": ["Transporte ida y vuelta","Almuerzo tipo Buffet","Acceso a piscina y playa"],
+      "long": "Disfruta de un día completo en la Isla del Encanto con actividades y tiempo libre para relajarte en la playa."
     },
     {
       "id": "centro-historico",
