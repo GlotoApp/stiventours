@@ -125,7 +125,12 @@
     </header>
     
     <div id="pdf-container">
-        <iframe id="pdf-frame" src="" title="Catálogo PDF"></iframe>
+        <!-- use embed tag for a more "native" PDF display; browser will render it with its default viewer -->
+        <embed id="pdf-frame" src="" type="application/pdf" width="100%" height="100%">
+        <!-- fallback text/link in case embed is ignored or not supported -->
+        <p id="pdf-fallback" style="color:#fff;text-align:center;padding:20px;display:none;">
+            No se puede mostrar el PDF aquí. <a id="pdf-link" href="#" style="color:#4fc3f7;">Abrir en otra pestaña</a>
+        </p>
     </div>
     
     <a id="whatsapp-btn" href="#" target="_blank" title="Contactar por WhatsApp">
@@ -145,27 +150,22 @@
         }
 
         if(frame) {
+            // si el navegador no soporta <embed> o lo ignora lanzamos un redirect simple
             frame.src = url;
-            if (isIos() && pdfContainer) {
-                // iOS sometimes only carga la primera página en el iframe;
-                // añadimos una nota y un enlace alternativo.
-                const note = document.createElement('p');
-                note.style.color = '#fff';
-                note.style.textAlign = 'center';
-                note.style.margin = '8px 0 0';
-                note.textContent = 'Si tu dispositivo iOS muestra solamente la primera página, desplázate con el dedo o abre el catálogo en una pestaña nueva:';
-                const openLink = document.createElement('a');
-                openLink.href = url;
-                openLink.target = '_blank';
-                openLink.style.display = 'block';
-                openLink.style.color = '#fff';
-                openLink.style.textAlign = 'center';
-                openLink.style.margin = '4px 0';
-                openLink.textContent = 'Abrir catálogo en nueva pestaña';
-
-                pdfContainer.appendChild(note);
-                pdfContainer.appendChild(openLink);
+            const fallback = document.getElementById('pdf-fallback');
+            const pdfLink = document.getElementById('pdf-link');
+            if(pdfLink) pdfLink.href = url;
+            // redirigir automáticamente en iOS para evitar problemas de renderizado
+            if (isIos()) {
+                window.location.href = url;
             }
+            // mostrar fallback si el embed no se carga en 1s
+            setTimeout(() => {
+                // si embed no estableció nadie, muestra vínculo
+                if (frame && frame.clientHeight === 0) {
+                    if(fallback) fallback.style.display = 'block';
+                }
+            }, 1000);
         }
         if(btn) {
             // el número de contacto debe venir desde data.json (campo contact.phone)
