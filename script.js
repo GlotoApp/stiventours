@@ -16,6 +16,17 @@ async function loadData() {
     if (pdfBtn && data.pdfCatalogo) {
       pdfBtn.href = data.pdfCatalogo; 
     }
+    // si hay un botón que abre el visor, manténlo visible y apúntalo a la nueva página
+    const viewerLink = document.getElementById('descarga-pdf-tours');
+    if (viewerLink) {
+      if (data.pdfCatalogo) {
+        viewerLink.href = 'visor.html';
+        viewerLink.style.display = '';
+      } else {
+        // oculta si no hay catálogo
+        viewerLink.style.display = 'none';
+      }
+    }
 
     // 2. Renderizar Pasadías (Existente)
     const validPasadias = validateData({ pasadias: data.pasadias || [] });
@@ -59,7 +70,8 @@ function renderTours(list) {
           ${item.features.map(f => `<li>• ${escapeHtml(f)}</li>`).join('')}
         </ul>
         <div class="flex justify-between items-center mt-auto">
-          <span class="price text-2xl">$${escapeHtml(item.price)} <small class="text-xs text-gray-400">${escapeHtml(item.currency)}</small></span>
+          <!-- display customizable label from data.json (stored in price field) -->
+          <span class="badge text-sm font-semibold text-orange-500">${escapeHtml(item.price || 'Más destacado')}</span>
           <button data-id="${item.id}" class="ver-mas bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 transition">Ver más</button>
         </div>
       </div>
@@ -91,7 +103,9 @@ function renderTours(list) {
 }
 
 function validateData(data){
-  const required = ['id','title','price','currency','image','short','features','long'];
+  // 'badge' is the customizable label field (formerly 'price');
+  // currency is no longer required. We accept either badge or legacy price.
+  const required = ['id','title','badge','image','short','features','long'];
   const items = Array.isArray(data && data.pasadias) ? data.pasadias : [];
   const validItems = [];
   const invalid = [];
@@ -140,7 +154,8 @@ function renderPasadias(list){
           ${item.features.map(f=>`<li>• ${escapeHtml(f)}</li>`).join('')}
         </ul>
         <div class="flex justify-between items-center">
-          <span class="price text-2xl">$${escapeHtml(item.price)} <small class="text-xs text-gray-400">${escapeHtml(item.currency)}</small></span>
+          <!-- display customizable label from data.json (badge field, fallback to price) -->
+          <span class="badge text-sm font-semibold text-orange-500">${escapeHtml(item.badge || item.price || 'Más destacado')}</span>
           <button data-id="${item.id}" class="ver-mas bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 transition">Ver más</button>
         </div>
       </div>
@@ -172,9 +187,10 @@ function showModal(item){
           <img id="st-image" src="" alt="" style="width:100%;border-radius:8px;object-fit:cover;margin-bottom:12px">
           <p id="st-long" class="text-gray-700"></p>
           <div style="margin-top:12px;display:flex;gap:8px;align-items:center;justify-content:space-between">
-            <span class="price" id="st-price"></span>
-            <a id="st-book" class="bg-orange-500 text-white px-4 py-2 rounded-lg font-bold" href="#">Reservar</a>
-          </div>
+                  <!-- dynamic label shown here -->
+                  <span id="st-badge" class="badge text-sm font-semibold text-orange-500"></span>
+                  <a id="st-book" class="bg-orange-500 text-white px-4 py-2 rounded-lg font-bold" href="#">Reservar</a>
+                </div>
         </div>
       </div>
     `;
@@ -188,7 +204,10 @@ function showModal(item){
   img.alt = item.title;
   img.loading = 'lazy';
   document.getElementById('st-long').textContent = item.long;
-  document.getElementById('st-price').textContent = `$${item.price} ${item.currency}`;
+  // show the custom label in modal
+  // show the custom label in modal (badge preferred)
+  const badgeEl = document.getElementById('st-badge');
+  if(badgeEl) badgeEl.textContent = item.badge || item.price || '';
   document.getElementById('st-book').href = `https://wa.me/${(getContactPhone())}?text=${encodeURIComponent('Hola, quiero reservar: '+item.title)}`;
 
   const closeBtn = document.getElementById('st-close');

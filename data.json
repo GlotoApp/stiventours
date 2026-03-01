@@ -1,65 +1,91 @@
 {
   "siteName": "Stivenm tours",
   "description": "Agencia de turismo y experiencias",
+  "pdfCatalogo": "pdf/Experiencias_Stivenm_Tours.pdf",
   "contact": {
     "phone": "573228209657",
     "email": "reservas@Stivenm Tours.com"
   },
   "pasadias": [
-    {
-      "id": "playa-blanca",
-      "title": "Playa Blanca Barú",
-      "price": "95.000",
-      "currency": "COP",
-      "tags": ["playa","nautico"],
-      "image": "https://turcol.co/wp-content/uploads/2022/10/Playa-Baru-3.png",
-      "short": "Transporte terrestre y náutico con almuerzo caribeño.",
-      "features": ["Transporte terrestre/náutico","Almuerzo caribeño","Guía acompañante"],
-      "long": "Ruta en barco hacia Playa Blanca, con tiempo para snorkel y almuerzo típico caribeño incluido."
-    },
-    {
-      "id": "isla-encanto",
-      "title": "Isla del Encanto",
-      "price": "180.000",
-      "currency": "COP",
-      "tags": ["playa", "buffet", "recomendado"],
-      "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
-      "short": "Transporte ida y vuelta, almuerzo buffet y acceso a playa.",
-      "features": ["Transporte ida y vuelta","Almuerzo tipo Buffet","Acceso a piscina y playa"],
-      "long": "Disfruta de un día completo en la Isla del Encanto con actividades y tiempo libre para relajarte en la playa."
-    },
-    {
-      "id": "centro-historico",
-      "title": "Centro Historico",
-      "price": "110.000",
-      "currency": "COP",
-      "tags": ["eco","caminata"],
-      "image": "https://blog.redbus.co/wp-content/uploads/2020/01/Proyecto-nuevo-2025-02-28T121409.781.jpg",
-      "short": "Caminata guiada, refrigerio y baño en río natural.",
-      "features": ["Caminata guiada","Refrigerio saludable","Baño en río natural"],
-      "long": "Explora senderos protegidos con guía especializado y disfruta de la biodiversidad local."
-    }
+{
+  "id": "playa-blanca",
+  "title": "Playa Blanca Barú",
+    "badge": "Más destacado",
+  "tags": ["playa", "pasadia", "baru"],
+  "image": "https://turcol.co/wp-content/uploads/2022/10/Playa-Baru-3.png",
+  "short": "Transporte terrestre climatizado con recogida en hotel y almuerzo caribeño.",
+  "features": [
+    "Recogida en zonas hoteleras",
+    "Transporte bus climatizado ida y vuelta",
+    "Almuerzo típico (Varias opciones)",
+    "Guía turístico acompañante"
+  ],
+  "long": "Disfruta de un día de sol en Barú con transporte terrestre ida y regreso en bus climatizado. Incluye recogida en Bocagrande, Castillo, Laguito y zona norte, además de un almuerzo típico con opciones de pescado, pollo, cerdo o vegetariano."
+},
+{
+  "id": "isla-del-rosario",
+  "title": "Isla del Rosario (Full Aventura)",
+  "badge": "Visitan con frecuencia",
+  "tags": ["playa", "snorkel", "recomendado"],
+  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "short": "Recogida en hotel, tour panorámico por islas, oceanario y snorkel.",
+  "features": [
+    "Recogida en zona hotelera",
+    "Entrada al Oceanario incluida",
+    "Snorkel con fotos acuáticas",
+    "Avistamiento de mapaches",
+    "Almuerzo con vista al mar"
+  ],
+  "long": "Un recorrido completo que incluye recogida en hotel, llegada a Playa Blanca (Barú) y tour panorámico por las Islas del Rosario. Disfruta de 1h 30min en el Oceanario (entrada incluida), snorkel en arrecifes de corales con fotos acuáticas, avistamiento de mapaches y almuerzo en restaurante con vista al mar."
+},
+{
+  "id": "aviario",
+  "title": "Aviario Nacional",
+  "badge": "Recomendado",
+  "tags": ["naturaleza", "aves"],
+  "image": "https://mlqfmr3rpryd.i.optimole.com/cb:JBSP.a525/w:auto/h:auto/q:100/ig:avif/https://cartagena-tours.co/wp-content/uploads/2024/04/pasadia-tradicional-5-3.png",
+  "short": "Visita al Aviario Nacional, traslado a Barú y almuerzo caribeño.",
+  "features": [
+    "Transporte bus climatizado ida y vuelta",
+    "Traslado a Barú",
+    "Almuerzo típico (Varias opciones)",
+    "Baño de mar"
+  ],
+  "long": "Una experiencia que combina la naturaleza del Aviario Nacional con el descanso en Barú. Incluye transporte climatizado, recorrido por el aviario, traslado para disfrutar del mar y un almuerzo típico caribeño con opciones de pollo, pescado, cerdo o vegetariano."
+}
   ],
   "tours": [
-    {
-      "id": "tour-ciudad",
-      "title": "City Tour Cartagena",
-      "price": "60.000",
-      "currency": "COP",
-      "image": "https://aventureros360.com.co/wp-content/uploads/2025/03/CASTILLO-DE-SAN-FELIPE-viajar-a-colombia-aventureros-360-1024x576.jpg",
-      "short": "Recorrido por las murallas y monumentos históricos.",
-      "features": ["Transporte climatizado", "Guía historiador", "Entradas incluidas"],
-      "long": "Un viaje en el tiempo por la Ciudad Heroica, conociendo el Castillo de San Felipe y las botas viejas."
-    },
-    {
-      "id": "tour-islas-rosario",
-      "title": "Tour Islas del Rosario",
-      "price": "180.000",
-      "currency": "COP",
-      "image": "https://islasdelrosariotours.com/cdn/shop/files/tour_al_oceanario_en_Cartagena_576x576.jpg?v=1736200019",
-      "short": "Día completo en las Islas del Rosario con snorkel y almuerzo típico.",
-      "features": ["Transporte en lancha rápida", "Equipo de snorkel", "Almuerzo típico isleño", "Guía local"],
-      "long": "Disfruta de aguas cristalinas, arrecifes de coral y playas paradisíacas en el Parque Nacional Natural Islas del Rosario. Incluye actividades acuáticas y tiempo libre para relajarte." 
-    }
+{
+  "id": "tour-ciudad",
+  "title": "City Tour Cartagena",
+    "badge": "Popular",
+  "tags": ["chiva", "cultura", "historia"],
+  "image": "https://aventureros360.com.co/wp-content/uploads/2025/03/CASTILLO-DE-SAN-FELIPE-viajar-a-colombia-aventureros-360-1024x576.jpg",
+  "short": "Recorrido en chiva típica por los monumentos y sitios icónicos de la ciudad.",
+  "features": [
+    "Transporte en Chiva Turística",
+    "Guía acompañante",
+    "Visita al Castillo de San Felipe",
+    "Paradas fotográficas (Letras, Botas, Bahía)",
+    "Caminata en Centro Histórico"
+  ],
+  "long": "Vive una experiencia cultural a bordo de una chiva típica de los años 50. El recorrido incluye paradas fotográficas en la Bahía de Cartagena, las Botas Viejas y las Letras de Cartagena, visita al Castillo de San Felipe y la Iglesia San Pedro Claver, finalizando con una caminata guiada por las mágicas calles del Centro Histórico."
+},
+{
+  "id": "tour-bahia",
+  "title": "Tour Bahía de Cartagena",
+  "badge": "Fiesta nocturna",
+  "tags": ["rumba", "nautico", "fiesta"],
+  "image": "https://dyktourvip.com/wp-content/uploads/2019/11/img-20180726-wa0081.jpg",
+  "short": "2 horas de recorrido con barra libre, música crossover y entrada a discoteca.",
+  "features": [
+    "2 horas de recorrido por la bahía",
+    "Barra libre (Ron y Aguardiente)",
+    "Música Crossover",
+    "Parada en la Virgen",
+    "Entrada a discoteca incluida"
+  ],
+  "long": "Vive la rumba sobre el mar con 2 horas de recorrido por la bahía de Cartagena. Disfruta de barra libre de ron con coca-cola o aguardiente con jugo de naranja, música crossover, parada en el monumento de la Virgen y remate con entrada incluida a una discoteca local."
+}
   ]
 }

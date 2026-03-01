@@ -78,6 +78,13 @@
         .nav-link:hover {
             color: var(--stiven-orange);
         }
+        /* nuevo estilo para la etiqueta genérica que reemplaza el precio */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            color: var(--stiven-white);
+        }
     </style>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -177,32 +184,14 @@
         </section>
 
                 <!-- Sección de Descarga PDF de Tours -->
-                <section id="tours" class="py-20 container mx-auto px-6">
+                <section id="pdf" class="py-20 container mx-auto px-6">
                     <div class="text-center mb-16">
                         <h2 class="text-4xl font-bold text-blue-900 mb-4 uppercase">Todas Las Experiencias</h2>
                         <div class="w-24 h-1 bg-orange-500 mx-auto"></div>
-                        <p class="mt-4 text-gray-600 mb-8">Descarga el catálogo completo de nuestros tours y experiencias en PDF.</p>
-                        <a href="#" id="descarga-pdf-tours" class="bg-orange-500 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg transition shadow-xl inline-flex items-center gap-2">
-                            <i class="fas fa-file-pdf"></i> Descargar PDF
+                        <p class="mt-4 text-gray-600 mb-8">Ve el catálogo completo de nuestros tours y experiencias aquí.</p>
+                        <a href="visor.html" id="descarga-pdf-tours" class="bg-orange-500 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg transition shadow-xl inline-flex items-center gap-2">
+                            <i class="fas fa-file-pdf"></i> Ver catálogo
                         </a>
-                    
-                    <script>
-                    // Forzar descarga inmediata del PDF al hacer clic en el botón
-                    document.addEventListener('DOMContentLoaded', function() {
-                        var pdfBtn = document.getElementById('descarga-pdf-tours');
-                        if (pdfBtn) {
-                            pdfBtn.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                var link = document.createElement('a');
-                                link.href = 'pdf/Experiencias_Stivenm_Tours.pdf';
-                                link.download = 'Experiencias_Stivenm_Tours.pdf';
-                                document.body.appendChild(link);
-                                link.click();
-                                document.body.removeChild(link);
-                            });
-                        }
-                    });
-                    </script>
                     </div>
                 </section>
 
@@ -344,7 +333,8 @@
     }
 
     function sendWhatsapp() {
-        const phoneNumber = "573228209657"; // Reemplaza con el número de teléfono real de Stivenm Tours
+        // obtain phone from script.js helper which reads data.json
+        const phoneNumber = (typeof getContactPhone === 'function') ? getContactPhone() : '573228209657';
         const message = "Hola Stivenm Tours, me gustaría recibir más información y disponibilidad sobre los planes de pasadía y tours que ofrecen en su web.";
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
