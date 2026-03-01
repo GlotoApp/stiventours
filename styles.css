@@ -12,12 +12,26 @@
 }
 
 html,body{height:100%}
+/* Compensar header fijo: espacio superior al hacer scroll a anclas */
+html { scroll-padding-top: 10px; }
+/* Alternativa/extra para asegurar separación visual de cada sección */
+section { scroll-margin-top: 10px; }
 body{background:linear-gradient(180deg,#fbfdff 0%,#f8fafc 100%);color:#0f172a;-webkit-font-smoothing:antialiased}
 
 #logoprincipal{
     width: 100px;
     height: auto;
 }
+
+#mobile-reservar-btn {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+
 
 /* Botones reutilizables */
 .btn-primary{background:var(--stiven-orange);color:white;padding:.9rem 1.2rem;border-radius:999px;font-weight:700;box-shadow:0 8px 20px rgba(255,126,0,0.12);transition:transform .25s ease,box-shadow .25s ease}

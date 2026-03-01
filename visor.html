@@ -2,23 +2,129 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Catálogo | Stivenm Tours</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { margin:0; font-family: 'Poppins', sans-serif; background: #000; }
-            iframe { width: 100%; height: 100%; border: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; }
+        body { font-family: 'Poppins', sans-serif; background: #000; overflow: hidden; }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            z-index: 100;
+            border-bottom: 3px solid #ff7e00;
+        }
+        
+        header h1 {
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .header-btn {
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+        
+        .header-btn:hover, .header-btn:active {
+            background: #0056b3;
+        }
+        
+        #pdf-container {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: calc(100% - 60px);
+            background: #000;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
+        #whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 101;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        
+        #whatsapp-btn:hover, #whatsapp-btn:active {
+            background: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            header { height: 50px; }
+            header h1 { font-size: 16px; }
+            #pdf-container { top: 50px; height: calc(100% - 50px); }
+            #whatsapp-btn { width: 50px; height: 50px; font-size: 24px; bottom: 16px; right: 16px; }
+        }
+        
+        @media (max-width: 480px) {
+            header { height: 48px; padding: 0 12px; }
+            header h1 { font-size: 14px; }
+            #pdf-container { top: 48px; height: calc(100% - 48px); }
+            #whatsapp-btn { width: 48px; height: 48px; font-size: 22px; }
+        }
     </style>
 </head>
 <body>
-    <!-- full-screen PDF container -->
-    <iframe id="pdf-frame" src="" title="Catálogo PDF" class="w-full h-full fixed top-0 left-0"></iframe>
-    <!-- floating WhatsApp contact button -->
-    <a id="whatsapp-btn" href="#" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#128C7E] text-white px-4 py-2 rounded-full font-bold inline-flex items-center gap-2 z-50">
-        <i class="fab fa-whatsapp"></i> Contactar
+    <header>
+        <a href="index.html" class="header-btn" title="Volver">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1>Catálogo</h1>
+    </header>
+    
+    <div id="pdf-container">
+        <iframe id="pdf-frame" src="" title="Catálogo PDF"></iframe>
+    </div>
+    
+    <a id="whatsapp-btn" href="#" target="_blank" title="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
-
     <script>
     // cargar enlace del PDF desde data.json
     fetch('data.json').then(r=>r.json()).then(data=>{

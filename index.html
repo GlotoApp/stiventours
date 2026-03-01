@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stivenm tours | Agencia de Turismo y Experiencias</title>
+    <link rel="icon" href="img/logo.png" type="image/png"">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -89,11 +90,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
-    <noscript>
-        <div style="background:#fff4f4;border:1px solid #fecaca;color:#842029;padding:12px;border-radius:8px;margin:16px;max-width:1100px;margin-left:auto;margin-right:auto;">
-            Esta página requiere JavaScript para funcionar correctamente. Si ves este mensaje, por favor habilita JavaScript o accede al sitio desde un servidor con JS activo.
-        </div>
-    </noscript>
+
 
     <!-- Header / Nav -->
     <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md border-b-4 border-orange-500">
@@ -102,18 +99,26 @@
                 <!-- Logo image instead of text -->
                 <img src="img/logo.png" alt="Stivenm Tours" class="h-8 object-contain" id="logoprincipal">
             </div>
+            
+            <div id="mobile-reservar-btn" class="md:hidden">
+    <button id="mobile-reservar-btn" onclick="sendWhatsapp()" aria-label="Reservar - abrir chat" class="md:hidden inline-flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-blue-700 transition shadow-md font-bold">
+        RESERVAR
+    </button>
             <div id="main-nav" class="hidden md:flex space-x-8 font-semibold items-center">
-                <a href="#inicio" class="text-blue-900 nav-link transition">Inicio</a>
                 <a href="#pasadias" class="text-blue-900 nav-link transition">Pasadías</a>
                 <a href="#tours" class="text-blue-900 nav-link transition">Tours</a>
+                <a href="#pdf" class="text-blue-900 nav-link transition">Catalogo</a>
+                <a href="#horarios" class="text-blue-900 nav-link transition">Horarios</a>
                 <a href="#nosotros" class="text-blue-900 nav-link transition">Nosotros</a>
-                <a href="#contacto" class="px-6 py-2 bg-orange-500 text-white rounded-full hover:bg-blue-700 transition shadow-md">RESERVAR</a>
             </div>
             <button id="mobile-nav-btn" aria-controls="main-nav" aria-expanded="false" class="md:hidden text-2xl text-blue-900" aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
+        </div>
     </header>
+
+
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-gradient h-[90vh] flex items-center justify-center text-center text-white px-4 pt-16">
@@ -183,6 +188,8 @@
             </div>
         </section>
 
+
+
                 <!-- Sección de Descarga PDF de Tours -->
                 <section id="pdf" class="py-20 container mx-auto px-6">
                     <div class="text-center mb-16">
@@ -190,10 +197,22 @@
                         <div class="w-24 h-1 bg-orange-500 mx-auto"></div>
                         <p class="mt-4 text-gray-600 mb-8">Ve el catálogo completo de nuestros tours y experiencias aquí.</p>
                         <a href="visor.html" id="descarga-pdf-tours" class="bg-orange-500 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg transition shadow-xl inline-flex items-center gap-2">
-                            <i class="fas fa-file-pdf"></i> Ver catálogo
+                            <i class="fas fa-file-pdf"></i> Ver catálogo completo
                         </a>
                     </div>
                 </section>
+
+                        <section id="horarios" class="py-20 container mx-auto px-6">
+            <div class="text-center mb-5">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4 uppercase">Horario</h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto"></div>
+                <p class="mt-4 text-gray-600">Nuestros servicios están disponibles <span class="font-bold text-orange-500">24 horas al día, 7 días a la semana</span> para mayor atencion</p>
+            </div>
+            <div class="text-center">
+                <div class="inline-block bg-green-500 text-white px-6 py-3 rounded-full text-lg font-bold">
+                    <i class="fas fa-clock mr-2"></i>Abierto las 24 horas
+                </div>
+            </div>        </section>
 
     
     <!-- Sección Corporativa -->
@@ -234,33 +253,31 @@
     <footer class="bg-white text-blue-900 pt-20 pb-10 border-t-8 border-blue-900">
         <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div>
-                <div class="text-3xl font-extrabold mb-6">
-                    <span>STIVENM </span><span class="text-orange-500">TOURS</span>
+                <div class="flex justify-center mb-4">
+                    <img src="img/logo.png" alt="Stivenm Tours" class="h-32 object-contain">
                 </div>
-                <p class="text-gray-600 mb-6">Expertos en crear sonrisas y experiencias memorables en cada destino.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+                <p class="text-gray-600 mb-6 text-center">Expertos en crear sonrisas y experiencias memorables en cada destino.</p>
+                <div class="flex space-x-4 justify-center">
+                    <a href="https://instagram.com/Stivenm_tours" target="_blank" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/stivenm_tours" target="_blank" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
             <div>
                 <h4 class="font-bold text-xl mb-6 text-orange-500">Destinos</h4>
                 <ul class="space-y-4 font-medium">
-                    <li><a href="#" class="hover:text-orange-500 transition">Isla del Encanto</a></li>
-                    <li><a href="#" class="hover:text-orange-500 transition">Playa Blanca Barú</a></li>
-                    <li><a href="#" class="hover:text-orange-500 transition">Centro Historico</a></li>
-                    <li><a href="#" class="hover:text-orange-500 transition">City Tour Cartagena</a></li>
-                    <li><a href="#" class="hover:text-orange-500 transition">Tour Islas del Rosario</a></li>
+                    <li><a href="#pasadias" class="hover:text-orange-500 transition">Playa Blanca Barú</a></li>
+                    <li><a href="#pasadias" class="hover:text-orange-500 transition">Isla del Rosario (Full Aventura)</a></li>
+                    <li><a href="#pasadias" class="hover:text-orange-500 transition">Aviario Nacional</a></li>
+                    <li><a href="#tours" class="hover:text-orange-500 transition">City Tour Cartagena</a></li>
+                    <li><a href="#tours" class="hover:text-orange-500 transition">Tour Bahía de Cartagena</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="font-bold text-xl mb-6 text-orange-500">Compañía</h4>
                 <ul class="space-y-4 font-medium">
                     <li><a href="#nosotros" class="hover:text-orange-500 transition">Nosotros</a></li>
-                    <li><a href="#" class="hover:text-orange-500 transition">Blog de Viajes</a></li>
-                    <li><a href="#" class="hover:text-orange-500 transition">Términos Legales</a></li>
-                    <li><a href="#" class="hover:text-orange-500 transition">Contacto</a></li>
+                    <li><a href="#horarios" class="hover:text-orange-500 transition">Horario</a></li>
+                    <li><a href="#contacto" class="hover:text-orange-500 transition">Contacto</a></li>
                 </ul>
             </div>
             <div>
@@ -306,13 +323,13 @@
             <div class="p-4 bg-[#E5DDD5] min-h-[180px]">
                 <div class="chat-bubble shadow-md">
                     <p class="text-[11px] text-orange-600 font-bold mb-1">Agente de Reservas</p>
-                    <p class="text-sm text-gray-800">¡Hola! Soy parte del equipo de Stivenm Tours. He preparado un borrador para tu consulta. ¿Deseas enviarlo ahora?</p>
+                    <p class="text-sm text-gray-800">¡Hola! Soy parte del equipo de Stivenm Tours. Comentame ¿En que puedo ayudarte?</p>
                 </div>
                 
                 <div class="mt-4 bg-white p-3 rounded-xl border-l-4 border-orange-500 shadow-sm">
                     <p class="text-xs text-gray-400 mb-1 uppercase font-bold tracking-tighter">Vista previa del mensaje:</p>
                     <p class="text-sm italic text-gray-600">
-                        "Hola Stivenm Tours, me gustaría recibir más información y disponibilidad sobre los planes de pasadía y tours que ofrecen en su web."
+                        "Hola Stivenm Tours, me gustaría recibir más información."
                     </p>
                 </div>
             </div>
@@ -335,7 +352,7 @@
     function sendWhatsapp() {
         // obtain phone from script.js helper which reads data.json
         const phoneNumber = (typeof getContactPhone === 'function') ? getContactPhone() : '573228209657';
-        const message = "Hola Stivenm Tours, me gustaría recibir más información y disponibilidad sobre los planes de pasadía y tours que ofrecen en su web.";
+        const message = "Hola Stivenm Tours, me gustaría recibir más información.";
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
         toggleWhatsapp();
