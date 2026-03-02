@@ -56,24 +56,6 @@
   "long": "Este plan combina el descanso en Playa Blanca (Barú) con la aventura del snorkeling. Incluye el transporte terrestre climatizado, un almuerzo típico con opciones de pollo, pescado, cerdo o vegetariano, y la experiencia de snorkeling con fotos profesionales de tu actividad bajo el agua."
 },
 {
-  "id": "playa-blanca-bajo-tortuga",
-  "title": "Playa Blanca + Bajo la Tortuga",
-  "badge": "Aventura",
-  "tags": ["manglares", "mapaches", "snorkeling", "baru"],
-  "image": "https://dyktourvip.com/wp-content/uploads/2019/11/img-20180726-wa0081.jpg",
-  [span_0](start_span)"short": "Recorrido por los manglares, alimentación de mapaches y snorkeling en arrecifes[span_0](end_span).",
-  "features": [
-    [span_1](start_span)"Recogida en hotel (Bocagrande, Castillo, Laguito y zona norte)[span_1](end_span)",
-    [span_2](start_span)"Paseo en lancha por la costa de Barú e ida a los manglares[span_2](end_span)",
-    [span_3](start_span)"Alimentación de mapaches con registro fotográfico[span_3](end_span)",
-    [span_4](start_span)"Visita a Playa Puntilla con tiempo de baño[span_4](end_span)",
-    [span_5](start_span)"Snorkeling en arrecife de corales con fotos acuáticas[span_5](end_span)",
-    [span_6](start_span)"Almuerzo típico caribeño (4 opciones)[span_6](end_span)",
-    [span_7](start_span)"Guía personalizado[span_7](end_span)"
-  ],
-  [span_8](start_span)"long": "Explora la biodiversidad de Barú con este tour que te lleva por los manglares para alimentar mapaches y realizar snorkeling en arrecifes de corales con fotos acuáticas incluidas[span_8](end_span). [span_9](start_span)Disfruta de tiempo de baño en Playa Puntilla y un almuerzo típico caribeño con opciones de pollo, pescado, cerdo o vegetariano[span_9](end_span). [span_10](start_span)El servicio incluye recogida en los principales sectores hoteleros de Cartagena[span_10](end_span)."
-},
-{
   "id": "isla-del-rosario",
   "title": "Isla del Rosario (Full Aventura)",
   "badge": "Visitan con frecuencia",
