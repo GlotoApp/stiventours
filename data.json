@@ -23,6 +23,22 @@
   "long": "Disfruta de un día de sol en Barú con transporte terrestre ida y regreso en bus climatizado. Incluye recogida en Bocagrande, Castillo, Laguito y zona norte, además de un almuerzo típico con opciones de pescado, pollo, cerdo o vegetariano."
 },
 {
+  "id": "islas-rosario-baru",
+  "title": "Islas del Rosario + Barú",
+  "badge": "Popular",
+  "tags": ["islas", "lancha", "baru"],
+  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "short": "Recorrido en lancha por las islas con paradas en San Martín de Pajarales y el Oceanario.",
+  "features": [
+    "Recogida en hotel (Bocagrande, Castillo, Laguito y zona norte)",
+    "Transporte en bus climatizado hasta Barú",
+    "Transporte en lancha ida y regreso desde Barú a Islas del Rosario",
+    "Parada en San Martín de Pajarales y el Oceanario",
+    "Almuerzo típico caribeño (4 opciones)"
+  ],
+  "long": "Explora lo mejor de ambos mundos: el archipiélago de las Islas del Rosario y las playas de Barú. El tour incluye el traslado terrestre hasta Barú para luego embarcar en una lancha hacia las islas, con paradas técnicas en San Martín de Pajarales y el Oceanario (entrada no incluida). Finaliza con un almuerzo típico y tiempo de playa."
+},
+{
   "id": "playa-blanca-snorkeling",
   "title": "Playa Blanca + Snorkeling",
   "badge": "Recomendado",
@@ -38,22 +54,6 @@
     "Guía turístico acompañante"
   ],
   "long": "Este plan combina el descanso en Playa Blanca (Barú) con la aventura del snorkeling. Incluye el transporte terrestre climatizado, un almuerzo típico con opciones de pollo, pescado, cerdo o vegetariano, y la experiencia de snorkeling con fotos profesionales de tu actividad bajo el agua."
-},
-{
-  "id": "islas-rosario-baru",
-  "title": "Islas del Rosario + Barú",
-  "badge": "Popular",
-  "tags": ["islas", "lancha", "baru"],
-  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
-  "short": "Recorrido en lancha por las islas con paradas en San Martín de Pajarales y el Oceanario.",
-  "features": [
-    "Recogida en hotel (Bocagrande, Castillo, Laguito y zona norte)",
-    "Transporte en bus climatizado hasta Barú",
-    "Transporte en lancha ida y regreso desde Barú a Islas del Rosario",
-    "Parada en San Martín de Pajarales y el Oceanario",
-    "Almuerzo típico caribeño (4 opciones)"
-  ],
-  "long": "Explora lo mejor de ambos mundos: el archipiélago de las Islas del Rosario y las playas de Barú. El tour incluye el traslado terrestre hasta Barú para luego embarcar en una lancha hacia las islas, con paradas técnicas en San Martín de Pajarales y el Oceanario (entrada no incluida). Finaliza con un almuerzo típico y tiempo de playa."
 },
 {
   "id": "isla-del-rosario",
