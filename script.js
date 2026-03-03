@@ -28,18 +28,27 @@ async function loadData() {
       }
     }
 
-    // 2. Renderizar Pasadías (Existente)
-    const validPasadias = validateData({ pasadias: data.pasadias || [] });
-    if (validPasadias.invalid.length) {
-      showValidationWarning(validPasadias.invalid);
-    }
-    renderPasadias(validPasadias.items);
+    // 2. Renderizar experiencias. Si el JSON ya contiene una lista unificada usa esa,
+    // en caso contrario mantenemos la compatibilidad con las antiguas claves.
+    let experienceItems = [];
+    let invalids = [];
 
-    // 3. Renderizar Tours (Nueva sección con tarjetas similares)
-    if (data.tours) {
-      const validTours = validateData({ pasadias: data.tours }); // Reutiliza validación
-      renderTours(validTours.items);
+    if (Array.isArray(data.experiencias)) {
+      const valid = validateData(data.experiencias);
+      experienceItems = valid.items;
+      invalids = valid.invalid;
+    } else {
+      const validPasadias = validateData(data.pasadias || []);
+      const validTours = validateData(data.tours || []);
+      experienceItems = [...validPasadias.items, ...validTours.items];
+      invalids = [...validPasadias.invalid, ...validTours.invalid];
     }
+
+    if (invalids.length) {
+      showValidationWarning(invalids);
+    }
+
+    renderExperiences(experienceItems);
 
   } catch (e) {
     console.error('Error cargando data.json', e);
@@ -50,15 +59,15 @@ async function loadData() {
 /**
  * Renderiza los Tours con el mismo diseño de tarjetas que los Pasadías
  */
-function renderTours(list) {
-  const container = document.getElementById('tours-list');
+// renderiza una lista genérica de experiencias (antes pasadías/tours)
+function renderExperiences(list) {
+  const container = document.getElementById('experiencias-list');
   if (!container) return;
   container.innerHTML = '';
 
   list.forEach(item => {
     const col = document.createElement('div');
-    // Usamos las mismas clases CSS: tour-card y reveal para animación
-    col.className = 'tour-card group reveal'; 
+    col.className = 'tour-card group reveal';
     col.innerHTML = `
       <div class="relative overflow-hidden">
         <img loading="lazy" src="${item.image}" alt="${escapeHtml(item.title)}" class="thumb">
@@ -70,8 +79,7 @@ function renderTours(list) {
           ${item.features.map(f => `<li>• ${escapeHtml(f)}</li>`).join('')}
         </ul>
         <div class="flex justify-between items-center mt-auto">
-          <!-- display customizable label from data.json (stored in price field) -->
-          <span class="badge text-sm font-semibold text-orange-500">${escapeHtml(item.price || 'Más destacado')}</span>
+          <span class="badge text-sm font-semibold text-orange-500">${escapeHtml(item.badge || item.price || 'Más destacado')}</span>
           <button data-id="${item.id}" class="ver-mas bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 transition">Ver más</button>
         </div>
       </div>
@@ -79,7 +87,6 @@ function renderTours(list) {
     container.appendChild(col);
   });
 
-  // Conectar los botones "Ver más" al modal existente
   container.querySelectorAll('.ver-mas').forEach(btn => {
     btn.addEventListener('click', () => {
       const id = btn.getAttribute('data-id');
@@ -88,7 +95,6 @@ function renderTours(list) {
     });
   });
 
-  // Reiniciar el observador de animaciones para las nuevas tarjetas
   if (window.IntersectionObserver) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(en => {
@@ -102,13 +108,13 @@ function renderTours(list) {
   }
 }
 
-function validateData(data){
-  // 'badge' is the customizable label field (formerly 'price');
-  // currency is no longer required. We accept either badge or legacy price.
+// valida una lista de experiencias pasadas al modal, tours o la nueva colección
+// se asegura de que cada objeto tenga los campos obligatorios.
+function validateData(items){
   const required = ['id','title','badge','image','short','features','long'];
-  const items = Array.isArray(data && data.pasadias) ? data.pasadias : [];
   const validItems = [];
   const invalid = [];
+  if(!Array.isArray(items)) items = [];
   items.forEach(it=>{
     const missing = required.filter(k=>{
       if(!(k in it)) return true;
@@ -122,7 +128,7 @@ function validateData(data){
 
 function showValidationWarning(list){
   if(!list || !list.length) return;
-  const container = document.getElementById('pasadias-list');
+  const container = document.getElementById('experiencias-list');
   if(!container) return;
   const warn = document.createElement('div');
   warn.className = 'col-span-3 p-4 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800';
@@ -131,46 +137,15 @@ function showValidationWarning(list){
 }
 
 function showLoadError(message){
-  const container = document.getElementById('pasadias-list');
+  const container = document.getElementById('experiencias-list');
   if(!container) return;
   container.innerHTML = `<div class="col-span-3 p-6 bg-red-50 border border-red-200 rounded-lg text-red-800">${escapeHtml(message)}</div>`;
 }
 
+// antigua función renderPasadias ya no se utiliza; mantenida para compatibilidad futura si se necesitara
 function renderPasadias(list){
-  const container = document.getElementById('pasadias-list');
-  if(!container) return;
-  container.innerHTML = '';
-  list.forEach(item => {
-    const col = document.createElement('div');
-    col.className = 'tour-card group';
-    col.innerHTML = `
-      <div class="relative overflow-hidden">
-        <img loading="lazy" src="${item.image}" alt="${escapeHtml(item.title)}" class="thumb">
-      </div>
-      <div class="body">
-        <h3 class="text-2xl font-bold text-blue-900 mb-3">${escapeHtml(item.title)}</h3>
-        <p class="text-sm text-gray-600 mb-4">${escapeHtml(item.short)}</p>
-        <ul class="text-sm text-gray-600 mb-4">
-          ${item.features.map(f=>`<li>• ${escapeHtml(f)}</li>`).join('')}
-        </ul>
-        <div class="flex justify-between items-center">
-          <!-- display customizable label from data.json (badge field, fallback to price) -->
-          <span class="badge text-sm font-semibold text-orange-500">${escapeHtml(item.badge || item.price || 'Más destacado')}</span>
-          <button data-id="${item.id}" class="ver-mas bg-orange-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 transition">Ver más</button>
-        </div>
-      </div>
-    `;
-    container.appendChild(col);
-  })
-
-  // delegación de eventos para botones Ver más
-  container.querySelectorAll('.ver-mas').forEach(btn=>{
-    btn.addEventListener('click', e=>{
-      const id = btn.getAttribute('data-id');
-      const item = list.find(x=>x.id===id);
-      if(item) showModal(item);
-    })
-  })
+  // esta función está deprecada; use renderExperiences en su lugar
+  renderExperiences(list);
 }
 
 function showModal(item){

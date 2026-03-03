@@ -211,8 +211,8 @@ header.scrolled{box-shadow:0 8px 30px rgba(2,6,23,0.12);background-color:rgba(25
     }
 }
 
-/* Optimización para sección Tours */
-#tours {
+/* Optimización para sección de experiencias unificadas */
+#experiencias {
     background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
 }
 

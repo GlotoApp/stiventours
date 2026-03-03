@@ -6,10 +6,10 @@
     "phone": "573228209657",
     "email": "reservas@Stivenm Tours.com"
   },
-  "pasadias": [
+  "experiencias": [
 {
   "id": "playa-blanca",
-  "title": "Playa Blanca Barú",
+  "title": "Playa Blanca",
     "badge": "Más destacado",
   "tags": ["playa", "pasadia", "baru"],
   "image": "https://turcol.co/wp-content/uploads/2022/10/Playa-Baru-3.png",
@@ -56,6 +56,110 @@
   "long": "Este plan combina el descanso en Playa Blanca (Barú) con la aventura del snorkeling. Incluye el transporte terrestre climatizado, un almuerzo típico con opciones de pollo, pescado, cerdo o vegetariano, y la experiencia de snorkeling con fotos profesionales de tu actividad bajo el agua."
 },
 {
+  "id": "playa-blanca-bajo-la-tortuga",
+  "title": "Playa Blanca + Bajo la Tortuga",
+  "badge": "Recomendado",
+  "tags": ["playa", "snorkeling", "naturaleza"],
+  "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+  "short": "Paseo en lancha por Barú, manglares con mapaches, Playa Puntilla y snorkeling coralino.",
+  "features": [
+    "Recogida en zona hotelera y puntos de encuentro",
+    "Paseo en lancha por la costa de Barú",
+    "Visita a manglares y alimentación de mapaches",
+    "Snorkeling en arrecife con fotos acuáticas",
+    "Almuerzo típico caribeño (4 opciones)",
+    "Guía personalizado"
+  ],
+  "long": "Vive una experiencia completa en Barú que incluye recogida en los principales sectores hoteleros y un recorrido en lancha por la costa. Descubre la fauna local en los manglares alimentando mapaches, disfruta de tiempo de baño en Playa Puntilla y explora la vida marina con una sesión de snorkeling en arrecifes de corales que incluye fotos acuáticas. El plan se completa con un almuerzo típico y acompañamiento de guía personalizado."
+},
+{
+  "id": "mirador-baru",
+  "title": "Mirador Barú",
+  "badge": "Exclusivo",
+  "tags": ["beach-club", "piscina", "confort"],
+  "image": "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80",
+  "short": "Día de playa premium con cóctel de bienvenida, cama frente al mar y acceso a piscina.",
+  "features": [
+    "Recogida en zona hotelera y puntos de encuentro",
+    "Cóctel de bienvenida incluido",
+    "Cama frente al mar garantizada",
+    "Uso de instalaciones (piscina y baños)",
+    "Almuerzo típico caribeño (4 opciones)",
+    "Guía personalizado"
+  ],
+  "long": "Disfruta de una experiencia de descanso superior en el Mirador Barú. Este plan incluye transporte desde los principales hoteles, un cóctel de bienvenida para iniciar el día y una cómoda cama frente al mar. Tendrás acceso total a las instalaciones, incluyendo la piscina, y podrás elegir entre cuatro opciones de almuerzo caribeño, siempre con la asistencia de un guía personalizado."
+},
+{
+  "id": "tour-tropical-mapaches",
+  "title": "Tour Tropical Mapaches",
+  "badge": "Más completo",
+  "tags": ["mapaches", "lancha", "snorkeling", "piscina"],
+  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "short": "Experiencia premium que combina descanso en club de playa con aventura en lancha, manglares y snorkeling.",
+  "features": [
+    "Recogida en hotel y puntos de encuentro",
+    "Cóctel de bienvenida y cama frente al mar",
+    "Uso de instalaciones (piscina y baños)",
+    "Paseo en lancha por la costa de Barú",
+    "Alimentación de mapaches en manglares (fotos)",
+    "Snorkeling en arrecife con fotos acuáticas",
+    "Almuerzo típico caribeño (4 opciones)",
+    "Guía personalizado"
+  ],
+  "long": "El Tour Tropical Mapaches es nuestra experiencia más completa. Comienza con la comodidad de un club de playa privado con piscina, cama frente al mar y cóctel de bienvenida. Luego, la aventura continúa en lancha visitando los manglares para interactuar con mapaches, tiempo de baño en Playa Puntilla y una inmersión de snorkeling con fotos submarinas incluidas. Finaliza el día con un excelente almuerzo caribeño y la atención de un guía dedicado."
+},
+{
+  "id": "playa-blanca-scuba-diving",
+  "title": "Playa Blanca + Scuba Diving (Buceo)",
+  "badge": "Aventura",
+  "tags": ["buceo", "submarinismo", "aventura", "baru"],
+  "image": "https://images.unsplash.com/photo-1544616598-6383f85bb9b2?auto=format&fit=crop&w=800&q=80",
+  "short": "Inmersión de 50 minutos con equipo completo, teoría y registro multimedia en Playa Blanca.",
+  "features": [
+    "Recogida en zona hotelera y puntos de encuentro",
+    "Transporte bus climatizado ida y regreso",
+    "1 Inmersión de 50 minutos con guía buzo",
+    "Teoría de equipo y buceo incluida",
+    "Equipo de buceo completo, fotos y video",
+    "Almuerzo típico caribeño (4 opciones)",
+    "Guía turístico acompañante"
+  ],
+  "long": "Explora las profundidades del Caribe con nuestra experiencia de Scuba Diving en Playa Blanca. El plan incluye transporte climatizado y una preparación completa con teoría sobre el equipo y técnicas de buceo. Disfrutarás de una inmersión de 50 minutos guiada por un profesional, con todo el equipo necesario y registro de fotos y videos de tu experiencia bajo el agua. Al finalizar, podrás disfrutar de un almuerzo típico frente al mar."
+},
+{
+  "id": "aviario",
+  "title": "Aviario Nacional",
+  "badge": "Recomendado",
+  "tags": ["naturaleza", "aves"],
+  "image": "https://mlqfmr3rpryd.i.optimole.com/cb:JBSP.a525/w:auto/h:auto/q:100/ig:avif/https://cartagena-tours.co/wp-content/uploads/2024/04/pasadia-tradicional-5-3.png",
+  "short": "Visita al Aviario Nacional, traslado a Barú y almuerzo caribeño.",
+  "features": [
+    "Transporte bus climatizado ida y vuelta",
+    "Traslado a Barú",
+    "Almuerzo típico (Varias opciones)",
+    "Baño de mar"
+  ],
+  "long": "Una experiencia que combina la naturaleza del Aviario Nacional con el descanso en Barú. Incluye transporte climatizado, recorrido por el aviario, traslado para disfrutar del mar y un almuerzo típico caribeño con opciones de pollo, pescado, cerdo o vegetariano."
+},
+{
+  "id": "baru-plancton",
+  "title": "Barú + Plancton Bioluminiscente",
+  "badge": "Mágico",
+  "tags": ["plancton", "nocturno", "experiencia", "baru"],
+  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "short": "Día de playa en Barú con snack y avistamiento del fenómeno de plancton bioluminiscente.",
+  "features": [
+    "Recogida en bus climatizado (zona hotelera)",
+    "Almuerzo típico caribeño (4 opciones)",
+    "Traslado a Playa Tranquila a las 3:00 P.M.",
+    "Uso de instalaciones en Playa Tranquila",
+    "Snack incluido antes de la actividad",
+    "Avistamiento de plancton (25 min)",
+    "Retorno a Cartagena en bus climatizado"
+  ],
+  "long": "Disfruta de una tarde relajante y una noche mágica en Barú. Este plan incluye transporte climatizado y un almuerzo típico. A media tarde, nos trasladamos a Playa Tranquila para disfrutar de sus instalaciones y, al caer la noche, después de un snack, viviremos la increíble experiencia de nadar o observar el plancton bioluminiscente durante 25 minutos antes de emprender el regreso a la ciudad."
+},
+{
   "id": "isla-del-rosario",
   "title": "Isla del Rosario (Full Aventura)",
   "badge": "Visitan con frecuencia",
@@ -72,22 +176,110 @@
   "long": "Un recorrido completo que incluye recogida en hotel, llegada a Playa Blanca (Barú) y tour panorámico por las Islas del Rosario. Disfruta de 1h 30min en el Oceanario (entrada incluida), snorkel en arrecifes de corales con fotos acuáticas, avistamiento de mapaches y almuerzo en restaurante con vista al mar."
 },
 {
-  "id": "aviario",
-  "title": "Aviario Nacional",
-  "badge": "Recomendado",
-  "tags": ["naturaleza", "aves"],
-  "image": "https://mlqfmr3rpryd.i.optimole.com/cb:JBSP.a525/w:auto/h:auto/q:100/ig:avif/https://cartagena-tours.co/wp-content/uploads/2024/04/pasadia-tradicional-5-3.png",
-  "short": "Visita al Aviario Nacional, traslado a Barú y almuerzo caribeño.",
+  "id": "playa-tranquila",
+  "title": "Playa Tranquila",
+  "badge": "Exclusivo",
+  "tags": ["playa", "relax", "baru", "lancha"],
+  "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+  "short": "Escape al sector exclusivo de Playa Tranquila con transporte en lancha, bebida de bienvenida y asoleadoras.",
   "features": [
-    "Transporte bus climatizado ida y vuelta",
-    "Traslado a Barú",
-    "Almuerzo típico (Varias opciones)",
-    "Baño de mar"
+    "Recogida en zona hotelera y puntos de encuentro",
+    "Transporte terrestre hasta Barú Playa Blanca",
+    "Traslado en lancha (10 min) a zona exclusiva",
+    "Bebida de bienvenida incluida",
+    "Uso de instalaciones (sombrillas y asoleadoras)",
+    "Almuerzo típico caribeño (4 opciones)",
+    "Guía personalizado"
   ],
-  "long": "Una experiencia que combina la naturaleza del Aviario Nacional con el descanso en Barú. Incluye transporte climatizado, recorrido por el aviario, traslado para disfrutar del mar y un almuerzo típico caribeño con opciones de pollo, pescado, cerdo o vegetariano."
-}
+  "long": "Disfruta de la serenidad en el sector más exclusivo de Barú. Este plan te lleva desde tu hotel hasta Playa Blanca, donde abordarás una lancha para un corto viaje de 10 minutos hacia Playa Tranquila. Serás recibido con una bebida de bienvenida y tendrás a tu disposición sombrillas y asoleadoras para un descanso total. Incluye un almuerzo típico con cuatro opciones a elegir y el acompañamiento de un guía personalizado."
+},
+{
+  "id": "playa-tranquila-plancton-adventure",
+  "title": "Playa Tranquila + Plancton",
+  "badge": "Full Experience",
+  "tags": ["playa", "snorkeling", "mapaches", "plancton"],
+  "image": "https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?auto=format&fit=crop&w=800&q=80",
+  "short": "El tour definitivo: lancha, fauna, snorkeling, relax en Playa Tranquila y plancton bioluminiscente.",
+  "features": [
+    "Recogida en zona hotelera y puntos de encuentro",
+    "Paseo en lancha y visita a manglares (mapaches)",
+    "Snorkeling en arrecife con fotos acuáticas",
+    "Estancia en Playa Tranquila (Bebida de bienvenida)",
+    "Uso de instalaciones y almuerzo típico (4 opciones)",
+    "Snack y avistamiento de plancton (25 min)",
+    "Retorno a Cartagena en bus climatizado"
   ],
-  "tours": [
+  "long": "Esta es nuestra experiencia más diversa y completa. Inicia con un recorrido de aventura en lancha visitando manglares para alimentar mapaches y realizando snorkeling en arrecifes de coral con fotos incluidas. Luego, disfrutarás de la exclusividad de Playa Tranquila con bebida de bienvenida, almuerzo y uso de instalaciones. Al anochecer, después de un snack, serás testigo del mágico plancton bioluminiscente antes de regresar cómodamente en bus a Cartagena."
+},
+{
+  "id": "tour-4-islas",
+  "title": "Tour 4 Islas",
+  "badge": "Más vendido",
+  "tags": ["islas", "cholon", "aventura", "full-day"],
+  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "short": "Recorrido completo por las Islas del Rosario, Cholón, Isla Privada y Playa Tranquila.",
+  "features": [
+    "Recogida en zona hotelera o punto acordado",
+    "Tour panorámico por Islas del Rosario e Isla Naval (Avioneta)",
+    "Parada en Isla Privada Kokomo (50 min)",
+    "Snorkeling u Oceanario (30 min)",
+    "Visita a Isla Cholón con cóctel de mariscos",
+    "Estancia en Playa Tranquila (Almuerzo y uso de instalaciones)",
+    "Retorno a Cartagena"
+  ],
+  "long": "Descubre el Caribe en un solo día con el Tour 4 Islas. Disfrutarás de un recorrido panorámico por el archipiélago de las Islas del Rosario, incluyendo el avistamiento de la avioneta sumergida. Visitaremos la exclusiva isla privada Kokomo, tendremos tiempo para snorkeling o el oceanario, y viviremos el ambiente de fiesta en Isla Cholón con un cóctel de mariscos incluido. El día finaliza con un almuerzo típico y descanso en las cómodas instalaciones de Playa Tranquila."
+},
+{
+  "id": "tour-4-islas-plancton",
+  "title": "Tour 4 Islas + Plancton Bioluminiscente",
+  "badge": "Experiencia Total",
+  "tags": ["islas", "cholon", "plancton", "snorkeling"],
+  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "short": "El tour más completo de Cartagena: 4 islas, fiesta en Cholón y la magia del plancton nocturno.",
+  "features": [
+    "Recogida en bus climatizado (zona hotelera)",
+    "Tour panorámico por Islas del Rosario e Isla Naval",
+    "Estancia en Isla Privada Kokomo e Isla Cholón",
+    "Snorkeling y cóctel de mariscos incluido",
+    "Almuerzo y uso de instalaciones en Playa Tranquila",
+    "Snack y avistamiento de plancton (25 min)",
+    "Retorno a Cartagena en bus climatizado"
+  ],
+  "long": "Vive un día y una noche inolvidables con el Tour 4 Islas + Plancton. Este recorrido te lleva por lo mejor del archipiélago: desde la exclusividad de la Isla Privada Kokomo y la historia de la avioneta sumergida, hasta la vibrante energía de Cholón con su cóctel de mariscos. Tras un relajante almuerzo y tarde de playa en Playa Tranquila, cerraremos con broche de oro presenciando el fenómeno del plancton bioluminiscente antes de regresar por tierra a Cartagena."
+},
+{
+  "id": "palmarito-beach",
+  "title": "Palmarito Beach",
+  "badge": "Familiar",
+  "tags": ["isla-tierra-bomba", "piscina", "buffet", "lancha"],
+  "image": "https://images.unsplash.com/photo-1540202404-a2f290338744?auto=format&fit=crop&w=800&q=80",
+  "short": "Día de descanso en Tierra Bomba con almuerzo buffet, piscina y transporte en lancha desde Punta Arena.",
+  "features": [
+    "Transporte ida y regreso en lancha (Punta Arena)",
+    "Cóctel de bienvenida",
+    "Almuerzo tipo Buffet incluido",
+    "Uso de todas las instalaciones",
+    "Acceso a piscina",
+    "Parque infantil para niños"
+  ],
+  "long": "Disfruta de un pasadía inolvidable en Palmarito Beach, ubicado en la isla de Tierra Bomba. El plan incluye un corto traslado en lancha desde Punta Arena, un refrescante cóctel de bienvenida y acceso total a las instalaciones, incluyendo una espectacular piscina y parque infantil. Deleita tu paladar con un completo almuerzo tipo buffet y relájate en un ambiente diseñado para el descanso de toda la familia."
+},
+{
+  "id": "punta-arena",
+  "title": "Punta Arena",
+  "badge": "Recomendado",
+  "tags": ["tierra-bomba", "playa", "economico", "lancha"],
+  "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+  "short": "Un día de playa tradicional en la Isla de Tierra Bomba con almuerzo típico y transporte en lancha.",
+  "features": [
+    "Transporte ida y regreso en lancha (Punta Arena)",
+    "Almuerzo típico caribeño (4 opciones)",
+    "Uso de kiosko, sillas y mesas",
+    "Zona de hamacas para descanso",
+    "Música ambiental"
+  ],
+  "long": "Disfruta de la calidez local en Punta Arena, ubicada en la Isla de Tierra Bomba. Este plan incluye un traslado rápido en lancha y te ofrece todas las comodidades para un día de playa relajado: kioskos, sillas, mesas y hamacas. Podrás elegir entre nuestras 4 opciones de almuerzo típico caribeño mientras disfrutas de un ambiente musical agradable frente al mar."
+},
 {
   "id": "tour-ciudad",
   "title": "City Tour Cartagena",
@@ -119,6 +311,176 @@
     "Entrada a discoteca incluida"
   ],
   "long": "Vive la rumba sobre el mar con 2 horas de recorrido por la bahía de Cartagena. Disfruta de barra libre de ron con coca-cola o aguardiente con jugo de naranja, música crossover, parada en el monumento de la Virgen y remate con entrada incluida a una discoteca local."
+},
+{
+  "id": "rumba-en-chiva",
+  "title": "Rumba en Chiva",
+  "badge": "Fiesta",
+  "tags": ["rumba", "chiva", "cultura", "noche"],
+  "image": "https://aventureros360.com.co/wp-content/uploads/2025/03/CASTILLO-DE-SAN-FELIPE-viajar-a-colombia-aventureros-360-1024x576.jpg",
+  "short": "Recorrido nocturno en transporte típico de los años 50 con música, paradas icónicas y discoteca.",
+  "features": [
+    "Transporte en Chiva Turística y Cultural",
+    "Guía acompañante durante el recorrido",
+    "Música crossover a bordo",
+    "Parada fotográfica en Castillo de San Felipe",
+    "Parada fotográfica en las Letras de Cartagena",
+    "Entrada a discoteca incluida"
+  ],
+  "long": "Vive la auténtica fiesta cartagenera a bordo de una Chiva, el transporte más emblemático de la costa. Durante este recorrido nocturno disfrutarás de música crossover mientras visitamos puntos clave para fotos como el Castillo de San Felipe y las Letras de Cartagena. La experiencia es guiada y culmina con la entrada incluida a una discoteca local para continuar la rumba."
+},
+{
+  "id": "volcan-totumo-arena-beach",
+  "title": "Volcán del Totumo + Arena Beach",
+  "badge": "Bienestar",
+  "tags": ["lodo", "spa-natural", "beach-club", "relajacion"],
+  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "short": "Baño de lodo medicinal en el volcán seguido de una tarde de relax en un exclusivo club de playa.",
+  "features": [
+    "Transporte terrestre ida y vuelta",
+    "Desayuno ligero y estación de café",
+    "Entrada al Volcán del Totumo",
+    "Almuerzo típico (3 opciones + postre)",
+    "Acceso a Club de Playa exclusivo",
+    "10% de descuento en licores (cubetazo o botella)",
+    "Guía acompañante"
+  ],
+  "long": "Disfruta de una combinación perfecta entre terapia natural y exclusividad. Comenzamos con la visita al Volcán del Totumo para un baño de lodo medicinal, precedido por un desayuno ligero. Luego, nos trasladamos a Arena Beach, un club de playa exclusivo donde disfrutarás de un almuerzo típico con postre y acceso total a las instalaciones para una tarde de descanso frente al mar."
+},
+{
+  "id": "tour-bahia-catamaran",
+  "title": "Tour Bahía Catamarán",
+  "badge": "Recomendado",
+  "tags": ["nautico", "catamaran", "barra-libre", "bahia"],
+  "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7bb7445?auto=format&fit=crop&w=800&q=80",
+  "short": "Navega por la bahía de Cartagena en un moderno catamarán con barra libre, música y snacks a bordo.",
+  "features": [
+    "Paseo de 2 horas por la bahía de Cartagena",
+    "Barra libre (Agua, cerveza, gaseosa, cuba libre y cóctel tropical)",
+    "Música crossover a bordo",
+    "Snack de cortesía durante el recorrido",
+    "Uso de baños en la embarcación"
+  ],
+  "long": "Disfruta de una experiencia sofisticada y relajante a bordo de nuestro catamarán. Durante dos horas recorrerás las tranquilas aguas de la bahía de Cartagena, deleitándote con la mejor vista de la ciudad moderna y el centro histórico. El plan incluye barra libre con variedad de bebidas y cócteles, acompañamiento musical y un snack para disfrutar mientras navegas con total comodidad."
+},
+{
+  "id": "tour-bahia-noche",
+  "title": "Tour Bahía Noche",
+  "badge": "Fiesta Nocturna",
+  "tags": ["noche", "barra-libre", "bahia", "rumba"],
+  "image": "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80",
+  "short": "Disfruta de la magia nocturna de Cartagena navegando por la bahía con barra libre y música crossover.",
+  "features": [
+    "Paseo de 2 horas por la bahía de Cartagena",
+    "Barra libre (Agua, cerveza, gaseosa, cuba libre y cóctel tropical)",
+    "Música crossover a bordo",
+    "Snack de cortesía incluido",
+    "Uso de instalaciones (baños)"
+  ],
+  "long": "Vive una noche inolvidable recorriendo la espectacular Bahía de Cartagena bajo las estrellas. Este tour de dos horas te ofrece una vista privilegiada del 'skyline' iluminado de la ciudad mientras disfrutas de una barra libre completa, snacks y el mejor ambiente musical. Es el plan perfecto para iniciar la noche con amigos o pareja en un entorno náutico exclusivo."
+},
+{
+  "id": "noche-blanca-show",
+  "title": "Noche Blanca",
+  "badge": "Más Completo",
+  "tags": ["cena-show", "bahia", "fiesta", "noche"],
+  "image": "https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=800&q=80",
+  "short": "Cena gourmet de 3 horas por la bahía con show de baile, DJ animador y barra libre de cócteles.",
+  "features": [
+    "Paseo de 3 horas por la bahía de Cartagena",
+    "Cóctel de bienvenida y cena completa (2 proteínas, 4 acompañamientos y postre)",
+    "Barra libre de cócteles nacionales (no incluye cerveza)",
+    "Show de baile y bailarines en vivo",
+    "DJ animador a bordo",
+    "Mesas compartidas y ambiente festivo",
+    "Protocolo de seguridad integral"
+  ],
+  "long": "La Noche Blanca es la mezcla perfecta entre elegancia y diversión. Disfruta de un crucero de 3 horas por la bahía de Cartagena que incluye una cena de gala y barra libre de cócteles nacionales. La noche cobra vida con un show de baile profesional, bailarines en vivo y un DJ animador que garantiza el entretenimiento. El servicio se realiza en mesas compartidas bajo estrictos protocolos de seguridad para una experiencia inolvidable."
+},
+{
+  "id": "sol-y-papaya-classic-day",
+  "title": "Sol y Papaya Classic Day",
+  "badge": "Recomendado",
+  "tags": ["bote-deportivo", "buffet", "isla", "relax"],
+  "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+  "short": "Pasadía premium con transporte en bote deportivo, almuerzo buffet y uso completo de instalaciones.",
+  "features": [
+    "Transporte ida y vuelta en bote deportivo (Muelle de la Bodeguita)",
+    "Cóctel de bienvenida incluido",
+    "Almuerzo estilo Buffet (4 opciones)",
+    "Menú buffet infantil y postre de la casa",
+    "Canasta de plátano rellena con pollo (Snack)",
+    "Uso de instalaciones y servicio de toalla"
+  ],
+  "long": "Disfruta de un día de lujo en Sol y Papaya. El plan comienza con un traslado rápido y cómodo en bote deportivo desde el muelle de la Bodeguita. Al llegar, serás recibido con un cóctel de bienvenida y tendrás acceso a todas las instalaciones con toalla incluida. La experiencia gastronómica destaca por un almuerzo tipo buffet con cuatro opciones, menú especial para niños, postre de la casa y una deliciosa canasta de plátano rellena como aperitivo."
+},
+{
+  "id": "sol-y-papaya-full-day-vip",
+  "title": "Sol y Papaya Full Day",
+  "badge": "Lujo Total",
+  "tags": ["open-bar", "zona-vip", "bote-deportivo", "premium"],
+  "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+  "short": "La experiencia más exclusiva: transporte en bote deportivo, Open Bar, zona VIP y almuerzo a la carta.",
+  "features": [
+    "Transporte ida y vuelta en bote deportivo (Muelle de la Bodeguita)",
+    "Cóctel de bienvenida y Open Bar incluido",
+    "Almuerzo a la carta con opciones seleccionadas",
+    "Acceso exclusivo a Zona VIP",
+    "Canasta de plátano rellena con pollo (Snack)",
+    "Uso de instalaciones, toalla y postre de la casa"
+  ],
+  "long": "Disfruta de un día de playa de máximo nivel con el plan Sol y Papaya Full Day VIP. Inicia tu viaje en un bote deportivo desde el muelle de la Bodeguita para llegar a un entorno de exclusividad. Tendrás acceso a la zona VIP, toallas y un Open Bar disponible durante tu estancia. La gastronomía es protagonista con una entrada de canasta de plátano, un almuerzo premium a la carta y un delicioso postre de la casa para finalizar el día."
+},
+{
+  "id": "bora-bora-beach-club",
+  "title": "Bora Bora Area Club",
+  "badge": "Exclusivo",
+  "tags": ["beach-club", "lancha-rapida", "islas-del-rosario", "premium"],
+  "image": "https://images.unsplash.com/photo-1573843225103-93aa90060015?auto=format&fit=crop&w=800&q=80",
+  "short": "Disfruta de uno de los clubes de playa más icónicos en las Islas del Rosario con transporte rápido y confort premium.",
+  "features": [
+    "Transporte en lancha rápida ida y vuelta",
+    "Cóctel de bienvenida incluido",
+    "Almuerzo (Varias opciones)",
+    "Asignación de cama de playa o asoleadora",
+    "Acceso a todas las instalaciones del club"
+  ],
+  "long": "Bora Bora Beach Club es el lugar ideal para quienes buscan un ambiente vibrante y sofisticado en el archipiélago del Rosario. El plan incluye un traslado ágil en lancha rápida, un cóctel de bienvenida para iniciar el día y la comodidad de una cama de playa o asoleadora reservada para tu descanso. Disfruta de una excelente propuesta gastronómica y de las aguas cristalinas en un entorno exclusivo."
+},
+{
+  "id": "bora-bora-vip",
+  "title": "Bora Bora Area VIP",
+  "badge": "Lujo & Exclusividad",
+  "tags": ["vip", "islas-del-rosario", "menu-a-la-carta", "beach-club"],
+  "image": "https://images.unsplash.com/photo-1573843225103-93aa90060015?auto=format&fit=crop&w=800&q=80",
+  "short": "Acceso total a las zonas Club y VIP con almuerzo a la carta y un servicio preferencial en el corazón de las Islas del Rosario.",
+  "features": [
+    "Transporte en lancha rápida ida y vuelta",
+    "Cóctel de bienvenida especial",
+    "Almuerzo con menú a la carta",
+    "Acceso exclusivo al área VIP y área Club",
+    "Cama de playa o asoleadora garantizada",
+    "Atención personalizada"
+  ],
+  "long": "Vive la experiencia definitiva en Bora Bora con el acceso VIP. Este plan te otorga la libertad de disfrutar tanto del ambiente vibrante del área Club como de la tranquilidad y exclusividad del área VIP. Incluye un cóctel de bienvenida especial, transporte rápido y un almuerzo superior donde podrás elegir platos de nuestro menú a la carta. Relájate en una cama de playa reservada y disfruta del mejor servicio del archipiélago."
+},
+{
+  "id": "top-3-islas-premium",
+  "title": "Top 3 Islas (Bora Bora, Pao Pao, Islabela)",
+  "badge": "Tour de Lujo",
+  "tags": ["islas-del-rosario", "multidestino", "premium", "lancha-rapida"],
+  "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
+  "short": "Visita los tres clubes de playa más exclusivos del archipiélago con cócteles incluidos en cada parada.",
+  "features": [
+    "Transporte en lancha rápida ida y vuelta",
+    "Guía bilingüe certificado",
+    "Tour panorámico por el archipiélago del Rosario",
+    "Cóctel de bienvenida en cada isla (3 en total)",
+    "Hidratación constante en la embarcación",
+    "Almuerzo con 3 opciones a elegir",
+    "Tiempo libre para disfrutar en cada isla"
+  ],
+  "long": "La experiencia definitiva para conocer lo mejor de las Islas del Rosario. En este tour premium visitarás Bora Bora, Pao Pao e Islabela, recibiendo un cóctel de bienvenida en cada uno de estos exclusivos clubes de playa. El plan incluye un tour panorámico para conocer el archipiélago, hidratación a bordo y un almuerzo de alta calidad. Es el equilibrio perfecto entre navegación, aventura y el confort de los mejores beach clubs de Cartagena."
 }
   ]
 }
