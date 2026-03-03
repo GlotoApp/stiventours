@@ -9,7 +9,7 @@ async function loadData() {
     stData = data;
 
     // Actualizar título del documento
-    document.title = (data.siteName || 'Stivenm Tours') + ' | Agencia de Turismo';
+    document.title = (data.siteName || 'StivenM Tours Cartagena') + ' | Agencia de Turismo';
 
     // 1. Optimización del PDF: Configura el link automáticamente si existe en data.json
     const pdfBtn = document.getElementById('download-pdf');
